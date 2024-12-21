@@ -1,0 +1,39 @@
+.form-new {
+    padding: 0 30%;
+  }
+  
+  .input-group-new {
+    margin-bottom: 30px;
+  }
+  
+  .input-group-new  p {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 30px;
+  }
+  
+  .input-group-new input {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 20px;
+  }
+  
+  .input-group-new input:focus {
+    border:2px solid #6a5acd;
+    outline: none;
+  }
+  
+  .button-group-new {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .back-link {
+    font-size: 20px;
+  }
+  
+  .button-group-new button {
+    font-size: 20px;
+    cursor: pointer;
+  }
