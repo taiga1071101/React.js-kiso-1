@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 import './threadsList.css';
 
 function ThreadsList() {
@@ -9,7 +10,9 @@ function ThreadsList() {
   const listDisplay = (newOffset) => {
     const apiURL = String(baseApiURL + newOffset);
     setOffset(newOffset);
+
     fetch(apiURL)
+    
     .then((res) => res.json())
     .then((data) => {
       setThreads(data);
@@ -41,13 +44,13 @@ function ThreadsList() {
         <ul>
           {
             threads.map(thread => {
-              return ( <li key={thread.id}>{thread.title}</li> );
+              return ( <li key={thread.id}><Link to={"/threads/" + thread.id} state={thread.title}>{thread.title}</Link></li> );
             })
           }
         </ul>
         <div>
           <button onClick={preList}>＜</button>
-          <span>{offset}～{offset + 10}</span>
+          <span>{offset + 1}～{offset + 10}</span>
           <button onClick={nextList}>＞</button>
         </div>
       </div>

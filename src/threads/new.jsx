@@ -8,6 +8,11 @@ const New = () => {
 
   const createButton = () => {
     const title = document.getElementById("title").value;
+    // ⇒ReactではDOMAPIは使わない。（そもそも、こういったものを省略するためにReactを使うようになった。）
+    // Reactでフォームを扱うには・・・
+    // １：入力をStateで持つ⇒常にユーザーが入力したものと同期（制御コンポーネント）　
+    // ２：refを使う。
+    // ３：form要素を使う。onSubmitのイベント。
     const body = {"title": title};
     fetch(apiURL, {
         method: 'POST',

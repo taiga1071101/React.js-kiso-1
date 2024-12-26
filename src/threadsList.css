@@ -7,12 +7,15 @@
   padding-top: 20px;
 }
 
+.threads-list ul {
+  padding: 50px;
+}
+
 ul {
   margin: 0px;
   list-style: none;
   display: inline-block;
   font-size: 20px;
-  padding: 50px;
   width: 50%;
 }
 
